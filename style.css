@@ -1,0 +1,434 @@
+/* Grundlegende Stile für den gesamten Körper */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container für die gesamte App, simuliert das Blatt Papier */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Header-Bereich (Hausanschlussriss RWW) */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #333;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.3em;
+    color: #666;
+}
+
+/* Allgemeine Stile für Sektionen (Rubriken) */
+section {
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+/* Info-Header-Bereich (Auftrag Nr., Datum) */
+.info-header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+.info-header .field-group {
+    flex: 0 0 auto;
+    min-width: 200px;
+    margin-bottom: 10px;
+}
+
+/* Hauptformular-Bereich */
+.main-form {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+.main-form .form-row {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.main-form .form-column {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.main-form .form-column:last-child {
+    padding-right: 0;
+}
+
+.form-column.full-width {
+    flex: 0 0 100%;
+    padding-right: 0;
+}
+
+/* Stile für Eingabefelder und Labels */
+.field-group {
+    margin-bottom: 15px;
+}
+
+.field-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.block-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.underline-input {
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 5px 0;
+    width: 100%;
+    outline: none;
+    font-size: 1em;
+    color: #333;
+    background-color: transparent;
+}
+
+/* Anpassung für das Kurztext-Textarea */
+.underline-input.textarea-short {
+    resize: vertical;
+    min-height: 40px;
+    max-height: 100px;
+    overflow-y: auto;
+    line-height: 1.5;
+}
+
+/* Stile für Radio-Button-Gruppen und Checkbox-Gruppen */
+.radio-group-header {
+    margin-bottom: 10px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px; /* Standardabstand zum Label, kann überschrieben werden */
+    margin-bottom: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Allgemeine Skalierung für alle Radio- und Checkbox-Inputs */
+.radio-group input[type="radio"],
+.radio-group input[type="checkbox"] { /* Auch Checkboxes skalieren */
+    margin-right: 5px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+/* Neue Klasse für Radio-Buttons in einer Zeile */
+.inline-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    gap: 25px;
+}
+
+.inline-radio-group label {
+    white-space: nowrap;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+/* Radio Buttons mit Inline-Input-Feld */
+.radio-with-input {
+    display: flex !important;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    flex-grow: 0;
+    font-weight: normal !important;
+}
+
+.radio-with-input .radio-inline-input {
+    width: 100px;
+    margin-left: 5px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    padding: 3px 0;
+    font-size: 0.9em;
+}
+
+/* Spezifisches Styling für den DN Radiobutton mit Input (jetzt korrekt in der Gruppe) */
+.dimension-werkstoff-group .radio-with-input {
+    /* Keine zusätzlichen Margins mehr, da es jetzt Teil des normalen Flows ist */
+}
+
+
+/* Layout-Anpassungen */
+
+/* Anbohrung auf gleiche Höhe wie Zählergröße setzen */
+.main-form .form-row.align-items-start-custom {
+    align-items: flex-start; /* Stellt sicher, dass die Elemente oben ausgerichtet sind */
+}
+
+/* Abstand der Anbohrung-Sektion zum oberen Label */
+.anbohrung-field-group {
+    margin-top: 0; /* Standardmäßig kein extra Abstand */
+    padding-top: 0; /* Ggf. Padding entfernen */
+}
+
+/* Zählerstandort Radio Buttons tiefer setzen */
+.zaehlerstandort-group {
+    margin-top: 5px; /* Erhöht den Abstand zum Label "Zählerstandort" */
+    margin-bottom: 5px;
+}
+
+/* Mauerdurchführung und Zählergröße näher zusammen */
+.main-form .form-row:nth-child(4) .right-column-spacing {
+    padding-top: 0;
+    margin-top: -15px;
+}
+
+.zaehlergroesse-group {
+    margin-bottom: 15px;
+}
+
+.mauerdurchfuehrung-group {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+/* Schutzrohr im gleichen Abstand zu Mauerdurchführung */
+.schutzrohr-group {
+    margin-top: 0; /* Standardabstand zum Label "Schutzrohr" beibehalten */
+    margin-bottom: 10px;
+}
+
+
+.note {
+    display: block;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Zeichenfläche */
+.drawing-area {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+.drawing-area h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Steuerlemente für die Zeichenfläche */
+.drawing-controls {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.drawing-controls button,
+.drawing-controls select {
+    padding: 8px 15px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.drawing-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.drawing-controls button:hover:not(:disabled),
+.drawing-controls select:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.drawing-controls select {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.drawing-controls select:hover {
+    background-color: #e2e6ea;
+}
+
+.drawing-controls label {
+    align-self: center;
+    font-weight: bold;
+    color: #555;
+    margin-right: 5px;
+}
+
+
+#drawingCanvas {
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 100%;
+    height: 600px;
+    cursor: crosshair;
+    touch-action: none;
+
+    /* Gitter-Hintergrund mit CSS-Verlauf */
+    background-image:
+        linear-gradient(to right, #e0e0e0 1px, transparent 1px),
+        linear-gradient(to bottom, #e0e0e0 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: -1px -1px;
+    background-origin: border-box;
+}
+
+
+/* Footer-Bereich */
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+.footer-info .field-group {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 20px;
+}
+
+.footer-info .field-group:last-child {
+    margin-right: 0;
+}
+
+/* Responsives Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .info-header,
+    .main-form,
+    .drawing-area,
+    .footer-info {
+        padding: 10px;
+    }
+
+    .info-header .field-group,
+    .main-form .form-column,
+    .footer-info .field-group {
+        flex-basis: 100%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .main-form .form-row {
+        flex-direction: column;
+    }
+
+    .radio-group label {
+        margin-right: 10px;
+    }
+
+    .drawing-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .radio-with-input .radio-inline-input {
+        width: auto;
+        flex-grow: 1;
+    }
+}
+
+/* Zusätzliche Anpassung für noch kleinere Bildschirme */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .radio-group label {
+        margin-right: 8px;
+        font-size: 0.9em;
+    }
+
+    .underline-input {
+        font-size: 0.9em;
+    }
+}

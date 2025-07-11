@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hausanschlussriss RWW</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hausanschlussriss</h1>
+            <p>RWW</p>
+        </header>
+
+        <section class="info-header">
+            <div class="field-group">
+                <label>Auftrag Nr.: <input type="text" class="underline-input" id="auftragNrInput"></label>
+            </div>
+            <div class="field-group">
+                <label>Datum: <input type="text" class="underline-input" id="dateInput"></label>
+            </div>
+        </section>
+
+        <section class="main-form">
+            <div class="form-row">
+                <div class="form-column">
+                    <div class="radio-group-header">
+                        <label class="block-label">Anschlussart:</label>
+                        <div class="radio-group inline-radio-group">
+                            <label><input type="radio" name="anschlussart" value="Neuanschluss"> Neuanschluss</label>
+                            <label><input type="radio" name="anschlussart" value="Auswechslung"> Auswechslung</label>
+                            <label><input type="radio" name="anschlussart" value="Umbindung"> Umbindung</label>
+                            <label><input type="radio" name="anschlussart" value="Reparatur"> Reparatur</label>
+                            <label><input type="radio" name="anschlussart" value="Umlegung"> Umlegung</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-column">
+                    <div class="field-group">
+                        <label>Gemeinde: <input type="text" class="underline-input"></label>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="field-group">
+                        <label>Hergestellt am: <input type="text" class="underline-input"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-column">
+                    <div class="field-group">
+                        <label>Kurztext: <textarea class="underline-input textarea-short" rows="2"></textarea></label>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="field-group">
+                        <label>Zählerstandort: </label>
+                        <div class="radio-group zaehlerstandort-group">
+                            <label><input type="radio" name="zaehlerstandort" value="Keller"> Keller</label>
+                            <label><input type="radio" name="zaehlerstandort" value="Schacht"> Schacht</label>
+                            <label><input type="radio" name="zaehlerstandort" value="Wohnung"> Wohnung</label>
+                            <label><input type="radio" name="zaehlerstandort" value="Hausanschlussraum"> Hausanschlussraum</label>
+                            <label><input type="radio" name="zaehlerstandort" value="Garage"> Garage</label>
+                            <label><input type="radio" name="zaehlerstandort" value="Garage (Schacht)"> Garage (Schacht)</label>
+                            <label><input type="radio" name="zaehlerstandort" value="Halle"> Halle</label>
+                            <label><input type="radio" name="zaehlerstandort" value="Halle (Anschlussraum)"> Halle (Anschlussraum)</label>
+                            <label><input type="radio" name="zaehlerstandort" value="Baumesseriste"> Baumesseriste</label>
+                            <label><input type="radio" name="zaehlerstandort" value="Anschlussraum (außerhalb)"> Anschlussraum (außerhalb)</label>
+                            <label class="radio-with-input"><input type="radio" name="zaehlerstandort" value="Sonstiges"> Sonstiges: <input type="text" class="underline-input radio-inline-input"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row align-items-start-custom"> <div class="form-column">
+                    <div class="field-group anbohrung-field-group"> <label>Anbohrung:</label>
+                        <div class="radio-group anbohrung-group">
+                            <label><input type="radio" name="anbohrung_typ" value="VA"> VA</label>
+                            <label><input type="radio" name="anbohrung_typ" value="VA PE Schweißen"> VA PE Schweißen</label>
+                            <label><input type="radio" name="anbohrung_typ" value="VA - Press"> VA - Press</label>
+                            <label><input type="radio" name="anbohrung_typ" value="Bettschieber"> Bettschieber</label>
+                            <label><input type="radio" name="anbohrung_typ" value="Ventilbohrbrücke"> Ventilbohrbrücke</label>
+                            <label><input type="radio" name="anbohrung_typ" value="sonstige"> sonstige</label>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <label>Dimension: <input type="text" class="underline-input"></label>
+                    </div>
+                </div>
+                <div class="form-column right-column-spacing">
+                    <div class="field-group">
+                        <label>Zählergröße:</label>
+                        <div class="radio-group zaehlergroesse-group">
+                            <label><input type="radio" name="dimension_typ" value="Q^2=4"> Q²=4</label>
+                            <label><input type="radio" name="dimension_typ" value="Q^2=10"> Q²=10</label>
+                            <label><input type="radio" name="dimension_typ" value="Q^2=16"> Q²=16</label>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <label>Mauerdurchführung: </label>
+                        <div class="radio-group mauerdurchfuehrung-group">
+                            <label><input type="radio" name="mauerdurchfuehrung" value="Rohrspardurchführung"> Rohrspardurchführung</label>
+                            <label><input type="radio" name="mauerdurchfuehrung" value="Rochrbogen (90 Grad)"> Rochrbogen (90 Grad)</label>
+                            <label><input type="radio" name="mauerdurchfuehrung" value="SMO-Durchführung"> SMO-Durchführung</label>
+                            <label><input type="radio" name="mauerdurchfuehrung" value="Einzeldurchführung"> Einzeldurchführung</label>
+                            <label><input type="radio" name="mauerdurchfuehrung" value="Presssing"> Presssing</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-column">
+                    <div class="field-group">
+                        <label>Hersteller: <input type="text" class="underline-input"></label>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="field-group">
+                        <label>Schutzrohr: </label>
+                        <div class="radio-group schutzrohr-group">
+                            <label><input type="checkbox" name="schutzrohr_option" value="PE-Kabelschutzrohr-DA 90, Blau"> PE-Kabelschutzrohr-DA 90, Blau</label>
+                            <label><input type="checkbox" name="schutzrohr_option" value="PVC Schutzrohr,blau"> PVC Schutzrohr,blau</label>
+                            <label><input type="checkbox" name="schutzrohr_option" value="DN 80"> DN 80</label>
+                            <label><input type="checkbox" name="schutzrohr_option" value="DN 100"> DN 100</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-column">
+                    <div class="field-group">
+                        <label>Dimension/Werkstoff: </label>
+                        <div class="radio-group dimension-werkstoff-group">
+                            <label><input type="radio" name="dimension_werkstoff" value="DN 25 PE"> DN 25 PE</label>
+                            <label><input type="radio" name="dimension_werkstoff" value="DN 32 PE"> DN 32 PE</label>
+                            <label><input type="radio" name="dimension_werkstoff" value="DN 50 PE"> DN 50 PE</label>
+                            <label class="radio-with-input"><input type="radio" name="dimension_werkstoff" value="dn_value_input"> DN <input type="text" class="underline-input radio-inline-input"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-column">
+                    </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-column full-width">
+                    <div class="field-group">
+                        <label>Verbindungsart: </label>
+                        <div class="radio-group inline">
+                            <label><input type="radio" name="verbindungsart" value="Pressverbindung"> Pressverbindung</label>
+                            <label><input type="radio" name="verbindungsart" value="Klemmverbindung"> Klemmverbindung</label>
+                            <label><input type="radio" name="verbindungsart" value="Schweißverbindung"> Schweißverbindung</label>
+                            <label><input type="radio" name="verbindungsart" value="Steckverbindung"> Steckverbindung</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-column full-width">
+                    <div class="field-group">
+                        <label>Hausanschlussprüfung: </label>
+                        <div class="radio-group inline">
+                            <label><input type="radio" name="hausanschlusspruefung" value="Ja"> Ja</label>
+                            <label><input type="radio" name="hausanschlusspruefung" value="Nein"> Nein</label>
+                        </div>
+                        <span class="note">Bei Umbindung bitte eine Kopie der alten Hausanschlusskarte diesem Formular beifügen!</span>
+                        <span class="note">Bei Neuanschluss bitte eine Kopie des Lageplanes beifügen!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="drawing-area">
+            <h3>Zeichenfläche</h3>
+            <div class="drawing-controls">
+                <button id="clearCanvas">Alles löschen</button>
+                <button id="undo">Rückgängig</button>
+                <button id="redo">Wiederholen</button>
+                <label>Linienart:
+                    <select id="lineMode">
+                        <option value="free">Freihand</option>
+                        <option value="straight">Gerade Linie</option>
+                    </select>
+                </label>
+            </div>
+            <canvas id="drawingCanvas"></canvas>
+        </section>
+
+        <section class="footer-info">
+            <div class="field-group">
+                <label>Ort, Datum: <input type="text" class="underline-input"></label>
+            </div>
+            <div class="field-group">
+                <label>Unterschrift: <input type="text" class="underline-input"></label>
+            </div>
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
