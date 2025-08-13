@@ -162,13 +162,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // ... (bestehender Code oben)
 
     // --- Pointer Handler ---
-    function getPointerPos(e) {
-        const rect = canvas.getBoundingClientRect();
-        return {
-            x: e.clientX - rect.left,
-            y: e.clientY - rect.top
-        };
-    }
+    // --- Pointer Handler ---
+function getPointerPos(e) {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+
+    // Verwenden von e.clientX/Y + window.scrollX/Y für die absolute Position
+    // und dann Abzug der absoluten Canvas-Position
+    return {
+        x: (e.clientX - rect.left) * scaleX,
+        y: (e.clientY - rect.top) * scaleY
+    };
+}
 
 // ... (bestehender Code unten)
 
@@ -345,4 +351,5 @@ document.addEventListener('DOMContentLoaded', () => {
         controls.exportPdf.textContent = 'Als PDF exportieren';
     }
 });
+
 
