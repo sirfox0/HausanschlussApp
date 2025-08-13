@@ -159,6 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
     controls.exportPdf.addEventListener('click', exportToPdf);
 
     // --- Pointer Handler ---
+    // ... (bestehender Code oben)
+
+    // --- Pointer Handler ---
     function getPointerPos(e) {
         const rect = canvas.getBoundingClientRect();
         return {
@@ -166,6 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
             y: e.clientY - rect.top
         };
     }
+
+// ... (bestehender Code unten)
 
     function handlePointerDown(e) {
         isDrawing = true;
@@ -340,3 +345,4 @@ document.addEventListener('DOMContentLoaded', () => {
         controls.exportPdf.textContent = 'Als PDF exportieren';
     }
 });
+
